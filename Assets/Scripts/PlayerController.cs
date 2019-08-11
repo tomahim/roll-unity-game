@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float turnSpeed = 5f;
     public float playerSpeed = 5f;
     public LevelController levelController;
+    public AudioSource fallingSound;
 
     Rigidbody m_Rigidbody;
     Vector3 m_Movement; 
@@ -27,6 +28,10 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Gem")) {
             levelController.gemRetrieved();
+        }
+        if (other.gameObject.CompareTag("Respawn")) {
+            fallingSound.Play();
+            StartCoroutine(LevelTransition.loadLevel(0.7f));
         }
     }
 }

@@ -11,6 +11,6 @@ public class LevelTransitionDisplay : MonoBehaviour
         levelText.text = "Level " + System.Convert.ToString(
             LevelTransition.currentLevelNumber
         );
-        StartCoroutine(LevelTransition.nextLevel());
+        StartCoroutine(LevelTransition.loadLevel());
     }
 }
