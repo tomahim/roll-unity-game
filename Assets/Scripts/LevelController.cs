@@ -2,25 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
 
 public class LevelController : MonoBehaviour
 {
     public Text scoreText;
+
     private int nbCollectedGems = 0;
-    private int totalGems;
+    private int nbTotalGems;
     
     private void Start() {
-        totalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
+        nbTotalGems = GameObject.FindGameObjectsWithTag("Gem").Length;
         updateScore();
     }
 
     public void gemRetrieved() {
         nbCollectedGems += 1;
         updateScore();
+        if (nbCollectedGems == nbTotalGems) {
+            StartCoroutine(LevelTransition.nextLevelTransition()); 
+        }
     }
 
     private void updateScore() {
-        scoreText.text = Convert.ToString(nbCollectedGems) + " / " + Convert.ToString(totalGems);
+        scoreText.text = Convert.ToString(nbCollectedGems) + " / " + Convert.ToString(nbTotalGems);
     }
 }
