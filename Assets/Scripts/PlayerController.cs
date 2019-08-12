@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpingHeight = 100f;
     public LevelController levelController;
     public AudioSource fallingSound;
+    public AudioSource explodingSound;
 
     Rigidbody m_Rigidbody;
     Collider m_Collider;
@@ -43,7 +44,14 @@ public class PlayerController : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Respawn")) {
             fallingSound.Play();
-            StartCoroutine(LevelTransition.loadLevel(0.7f));
+            StartCoroutine(LevelTransition.loadLevel(1.2f));
         }
     }
+
+     void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.CompareTag("Explosive")) {
+            explodingSound.Play();
+            StartCoroutine(LevelTransition.loadLevel(1.2f));
+        }
+     }
 }
