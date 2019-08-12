@@ -4822,6 +4822,15 @@ PrefabInstance:
       propertyPath: levelController
       value: 
       objectReference: {fileID: 261083650}
+    - target: {fileID: 3863121323997800614, guid: 7683fb123119c1041946c50c5c9b2198,
+        type: 3}
+      propertyPath: jumpingHeight
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509330143, guid: 7683fb123119c1041946c50c5c9b2198, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 71360e3705892914089bbb7f7eb84ccc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7683fb123119c1041946c50c5c9b2198, type: 3}
 --- !u!1001 &477727575617533881
