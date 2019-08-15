@@ -73,7 +73,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 86f158160f8d4164eb66e361ea297529, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 71360e3705892914089bbb7f7eb84ccc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.503
   m_Pitch: 1
@@ -224,9 +224,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 5
   playerSpeed: 5
-  jumpingHeight: 100
+  jumpingHeight: 600
   levelController: {fileID: 0}
   fallingSound: {fileID: 1509330143}
+  explodingSound: {fileID: 1013903572327043521}
 --- !u!136 &911960185674295620
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -375,7 +376,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2db382d0c35448541ac50d57586c10a5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
