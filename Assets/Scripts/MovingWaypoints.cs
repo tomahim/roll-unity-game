@@ -15,7 +15,7 @@ public class MovingWaypoints : MonoBehaviour
     private int current = 0;
 
 	void Update () {
-		if(Vector3.Distance(waypoints[current].transform.position, transform.position) < waypointRadius)
+		/*if(Vector3.Distance(waypoints[current].transform.position, transform.position) < waypointRadius)
         {
             current++;
             if (current >= waypoints.Length)
@@ -24,19 +24,21 @@ public class MovingWaypoints : MonoBehaviour
             }
         }
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
-
+        */
     }
 
     void OnTriggerEnter(Collider collider)
     {
-        if (isPlateform && collider.gameObject == player) {
+        if (isPlateform && collider.gameObject == player && player.transform.parent != transform) {
+            Debug.Log("enter");
             player.transform.SetParent(transform);
         }
     }
     void OnTriggerExit(Collider collider)
     {
         if (isPlateform && collider.gameObject == player) {
-            player.transform.parent = null;
+            Debug.Log("exit");
+            // player.transform.parent = null;
         }
     }
 }

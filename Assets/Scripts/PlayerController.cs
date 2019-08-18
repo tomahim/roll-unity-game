@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float turnSpeed = 5f;
-    public float playerSpeed = 5f;
+    public float playerSpeed = 7f;
     public float jumpingHeight = 100f;
     public LevelController levelController;
     public AudioSource fallingSound;
@@ -14,6 +13,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody m_Rigidbody;
     Collider m_Collider;
     Vector3 m_Movement; 
+
+    bool jumpAction = false;
 
     void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
