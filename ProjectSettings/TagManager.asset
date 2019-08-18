@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Gem
   - Explosive
+  - Trampoline
   layers:
   - Default
   - TransparentFX

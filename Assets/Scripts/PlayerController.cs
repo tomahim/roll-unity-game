@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     Collider m_Collider;
     Vector3 m_Movement; 
 
-    bool jumpAction = false;
+    bool willBounce = false;
+    float bounceHeight = 20f;
 
     void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -36,16 +37,20 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown ("space") && isGrounded()) {
             m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
         }
+        
+        if (willBounce) {
+            m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
+            willBounce = false;
+        }
     }
 
-    
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Gem")) {
             levelController.gemRetrieved();
         }
         if (other.gameObject.CompareTag("Respawn")) {
             fallingSound.Play();
-            StartCoroutine(LevelTransition.loadLevel(1.2f));
+            StartCoroutine(LevelTransition.loadLevel(0.8f));
         }
     }
 
@@ -53,6 +58,12 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Explosive")) {
             explodingSound.Play();
             StartCoroutine(LevelTransition.loadLevel(1.2f));
+        }
+        if (collision.gameObject.CompareTag("Trampoline")) {
+            willBounce = true;
+            m_Rigidbody.AddForce(Vector3.up * 200f);
+            Animator trampolineAnimator = collision.gameObject.GetComponent<Animator>();
+            trampolineAnimator.SetTrigger("BounceTrigger");
         }
      }
 }
