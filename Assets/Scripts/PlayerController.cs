@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Explosive")) {
             explodingSound.Play();
             StartCoroutine(LevelTransition.loadLevel(1.2f));
+            collision.gameObject.GetComponent<Explodable>().explode();
+            Destroy(collision.gameObject);
         }
         if (collision.gameObject.CompareTag("Trampoline")) {
             willBounce = true;

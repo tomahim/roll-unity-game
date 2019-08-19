@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4077357614493754247}
   - component: {fileID: 480908428706809609}
   - component: {fileID: 6602070621943307308}
+  - component: {fileID: 6665810955415864809}
   m_Layer: 0
   m_Name: TNTBox
   m_TagString: Explosive
@@ -109,3 +110,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6665810955415864809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091269557736765681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43d96cc33916cb4b92a1073392e90ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
