@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerSpeed = 7f;
+    public float minPlayerSpeed = 4.2f;
+    public float maxPlayerSpeed = 7.2f;
+
     public float jumpingHeight = 100f;
     public LevelController levelController;
     public AudioSource fallingSound;
@@ -17,22 +19,37 @@ public class PlayerController : MonoBehaviour
     bool willBounce = false;
     float bounceHeight = 20f;
 
-    void Start() {
+    float acceleration = 0f;
+    float accelerationStep = 0.015f;
+
+    private void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Collider = GetComponent<Collider>();
     }
 
-    bool isGrounded() {
+    private bool isGrounded() {
         float distanceToTheGround = m_Collider.bounds.extents.y;
         return Physics.Raycast(transform.position, Vector3.down, distanceToTheGround + 0.1f);
     }
 
-    void Update() {
+    private void Update() {
         float horizontal = Input.GetAxis ("Horizontal");
         float vertical = Input.GetAxis ("Vertical");
+
+        bool isMoving = horizontal != 0 || vertical != 0;
+        if (isMoving) {
+            if (acceleration < minPlayerSpeed) {
+                acceleration = minPlayerSpeed;
+            } else if (acceleration < maxPlayerSpeed) {
+                acceleration += accelerationStep;
+            }
+        } else if (acceleration > 0) {
+            acceleration = 0;
+        }
+
         m_Movement.Set(horizontal, 0, vertical);
         m_Movement.Normalize();
-        m_Rigidbody.AddForce(m_Movement * playerSpeed);
+        m_Rigidbody.AddForce(m_Movement * acceleration);
 
         if (Input.GetKeyDown ("space") && isGrounded()) {
             m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
@@ -54,7 +71,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-     void OnCollisionEnter(Collision collision) {
+    private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Explosive")) {
             explodingSound.Play();
             StartCoroutine(LevelTransition.loadLevel(1.2f));
