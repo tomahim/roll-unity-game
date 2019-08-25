@@ -42,7 +42,6 @@ public class LevelController : MonoBehaviour
         displayInstruction(false);
         LevelTransition.currentLevelNumber = getCurrentLevelNumberFromSceneName();
         timerText.text = "";
-        Debug.Log("on start, level is " + LevelTransition.currentLevelNumber);
         StartCoroutine(displayLevelNumber());
         if (LevelTransition.currentLevelNumber == 1) {
             StartCoroutine(showInstruction("Move the ball with arrow keys and collect all the gold gems !"));

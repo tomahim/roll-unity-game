@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
 
     public float jumpingHeight = 100f;
     public LevelController levelController;
-    public AudioSource fallingSound;
-    public AudioSource explodingSound;
 
     Rigidbody m_Rigidbody;
     Collider m_Collider;
@@ -24,12 +22,22 @@ public class PlayerController : MonoBehaviour
     float acceleration = 0f;
     float accelerationStep = 0.015f;
 
+    private bool isCurrentlyGrounded = true;
+
     private System.Random random;
+    private AudioSource fallingSound;
+    private AudioSource explodingSound;
+    private AudioSource trampolineBounceSound;
+    private AudioSource bounceGroundSound;
 
     private void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Collider = GetComponent<Collider>();
         random = new System.Random();
+        fallingSound = GameObject.Find("Sounds/FallingSound").GetComponent<AudioSource>();
+        explodingSound = transform.Find("Sounds/ExplodingSound").GetComponent<AudioSource>();
+        trampolineBounceSound = transform.Find("Sounds/TrampolineBounceSound").GetComponent<AudioSource>();
+        bounceGroundSound = transform.Find("Sounds/BounceGroundSound").GetComponent<AudioSource>();
     }
 
     private bool isGrounded() {
@@ -57,7 +65,13 @@ public class PlayerController : MonoBehaviour
             m_Movement.Normalize();
             m_Rigidbody.AddForce(m_Movement * acceleration);
 
+            if (!isCurrentlyGrounded && isGrounded()) {
+                bounceGroundSound.Play();
+                isCurrentlyGrounded = true;
+            }
+
             if (Input.GetKeyDown ("space") && isGrounded()) {
+                isCurrentlyGrounded = false;
                 m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
             }
             
@@ -67,6 +81,7 @@ public class PlayerController : MonoBehaviour
             }
             
             if (willBounce) {
+                isCurrentlyGrounded = false;
                 m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
                 willBounce = false;
             }
@@ -95,6 +110,7 @@ public class PlayerController : MonoBehaviour
             willBounce = true;
             Animator trampolineAnimator = collision.gameObject.GetComponent<Animator>();
             trampolineAnimator.SetTrigger("BounceTrigger");
+            trampolineBounceSound.Play();
         }
      }
 }
