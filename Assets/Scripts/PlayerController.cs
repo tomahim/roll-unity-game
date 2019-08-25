@@ -79,10 +79,11 @@ public class PlayerController : MonoBehaviour
                 m_Rigidbody.AddForce (random.Next(6), 15f, random.Next(6), ForceMode.Impulse);
                 willExplode = false;
             }
-            
             if (willBounce) {
+                Debug.Log("bounce");
                 isCurrentlyGrounded = false;
-                m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
+                m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.VelocityChange);
+                // m_Rigidbody.AddForce(Vector3.up * bounceHeight);
                 willBounce = false;
             }
         }
@@ -108,9 +109,11 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Trampoline")) {
             willBounce = true;
-            Animator trampolineAnimator = collision.gameObject.GetComponent<Animator>();
-            trampolineAnimator.SetTrigger("BounceTrigger");
             trampolineBounceSound.Play();
+            Animator trampolineAnimator = collision.gameObject.GetComponent<Animator>();
+            if (trampolineAnimator) {
+                trampolineAnimator.SetTrigger("BounceTrigger");
+            }
         }
      }
 }
