@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minPlayerSpeed = 4.2f;
-    public float maxPlayerSpeed = 7.2f;
+    public float minPlayerSpeed = 5.2f;
+    public float maxPlayerSpeed = 8.2f;
 
     public float jumpingHeight = 100f;
     public LevelController levelController;
@@ -33,31 +33,33 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        float horizontal = Input.GetAxis ("Horizontal");
-        float vertical = Input.GetAxis ("Vertical");
+        if (LevelTransition.hasGameStarted) {
+            float horizontal = Input.GetAxis ("Horizontal");
+            float vertical = Input.GetAxis ("Vertical");
 
-        bool isMoving = horizontal != 0 || vertical != 0;
-        if (isMoving) {
-            if (acceleration < minPlayerSpeed) {
-                acceleration = minPlayerSpeed;
-            } else if (acceleration < maxPlayerSpeed) {
-                acceleration += accelerationStep;
+            bool isMoving = horizontal != 0 || vertical != 0;
+            if (isMoving) {
+                if (acceleration < minPlayerSpeed) {
+                    acceleration = minPlayerSpeed;
+                } else if (acceleration < maxPlayerSpeed) {
+                    acceleration += accelerationStep;
+                }
+            } else if (acceleration > 0) {
+                acceleration = 0;
             }
-        } else if (acceleration > 0) {
-            acceleration = 0;
-        }
 
-        m_Movement.Set(horizontal, 0, vertical);
-        m_Movement.Normalize();
-        m_Rigidbody.AddForce(m_Movement * acceleration);
+            m_Movement.Set(horizontal, 0, vertical);
+            m_Movement.Normalize();
+            m_Rigidbody.AddForce(m_Movement * acceleration);
 
-        if (Input.GetKeyDown ("space") && isGrounded()) {
-            m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
-        }
-        
-        if (willBounce) {
-            m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
-            willBounce = false;
+            if (Input.GetKeyDown ("space") && isGrounded()) {
+                m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
+            }
+            
+            if (willBounce) {
+                m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
+                willBounce = false;
+            }
         }
     }
 

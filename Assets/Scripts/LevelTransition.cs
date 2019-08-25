@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public static class LevelTransition {
 
     public static int currentLevelNumber = 1;
+    public static bool hasGameStarted = false;
 
-    public static IEnumerator nextLevelTransition() {
+    public static IEnumerator nextLevel() {
         currentLevelNumber += 1;
         PlayerPrefs.SetInt("currentLevelNumber", currentLevelNumber);
-        yield return new WaitForSeconds(0.7f);
-        SceneManager.LoadScene("LevelTransition");
+        yield return new WaitForSeconds(2.5f);
+        hasGameStarted = false;
+        SceneManager.LoadScene("Level" + currentLevelNumber);
     }
     
     public static IEnumerator loadLevel(float waitingTime = 2.5f) {

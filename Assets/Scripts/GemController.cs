@@ -8,8 +8,8 @@ public class GemController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("Player")) {
-            gameObject.SetActive(false);
             pickupSound.Play();
+            gameObject.SetActive(false);
         }
     }
 }
