@@ -17,14 +17,19 @@ public class PlayerController : MonoBehaviour
     Vector3 m_Movement; 
 
     bool willBounce = false;
-    float bounceHeight = 20f;
+    float bounceHeight = 29f;
+
+    bool willExplode = false;
 
     float acceleration = 0f;
     float accelerationStep = 0.015f;
 
+    private System.Random random;
+
     private void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_Collider = GetComponent<Collider>();
+        random = new System.Random();
     }
 
     private bool isGrounded() {
@@ -56,6 +61,11 @@ public class PlayerController : MonoBehaviour
                 m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
             }
             
+            if (willExplode) {
+                m_Rigidbody.AddForce (random.Next(6), 15f, random.Next(6), ForceMode.Impulse);
+                willExplode = false;
+            }
+            
             if (willBounce) {
                 m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.Impulse);
                 willBounce = false;
@@ -75,6 +85,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Explosive")) {
+            willExplode = true;
             explodingSound.Play();
             StartCoroutine(LevelTransition.loadLevel(1.2f));
             collision.gameObject.GetComponent<Explodable>().explode();
@@ -82,7 +93,6 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Trampoline")) {
             willBounce = true;
-            m_Rigidbody.AddForce(Vector3.up * 200f);
             Animator trampolineAnimator = collision.gameObject.GetComponent<Animator>();
             trampolineAnimator.SetTrigger("BounceTrigger");
         }
