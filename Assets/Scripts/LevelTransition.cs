@@ -18,6 +18,7 @@ public static class LevelTransition {
     
     public static IEnumerator loadLevel(float waitingTime = 2.5f) {
         yield return new WaitForSeconds(waitingTime);
+        hasGameStarted = false;
         SceneManager.LoadScene("Level" + currentLevelNumber);
     }
     

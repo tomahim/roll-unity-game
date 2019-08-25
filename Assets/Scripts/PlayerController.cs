@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minPlayerSpeed = 5.2f;
-    public float maxPlayerSpeed = 8.2f;
+    public float minPlayerSpeed = 4.2f;
+    public float maxPlayerSpeed = 7.2f;
 
     public float jumpingHeight = 100f;
     public LevelController levelController;
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     bool willExplode = false;
 
     float acceleration = 0f;
-    float accelerationStep = 0.015f;
+    float accelerationStep = 0.005f;
 
     private bool isCurrentlyGrounded = true;
 
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded() {
         float distanceToTheGround = m_Collider.bounds.extents.y;
-        return Physics.Raycast(transform.position, Vector3.down, distanceToTheGround + 0.1f);
+        return Physics.Raycast(transform.position, -Vector3.up, distanceToTheGround + 0.1f);
     }
 
     private void Update() {
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
             m_Movement.Set(horizontal, 0, vertical);
             m_Movement.Normalize();
             m_Rigidbody.AddForce(m_Movement * acceleration);
-
+            
             if (!isCurrentlyGrounded && isGrounded()) {
                 bounceGroundSound.Play();
                 isCurrentlyGrounded = true;

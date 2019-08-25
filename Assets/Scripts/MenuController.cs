@@ -21,7 +21,7 @@ public class MenuController : MonoBehaviour
     }
 
     public void continueGame() {
-        StartCoroutine(LevelTransition.loadLevelWithTransition());
+        StartCoroutine(LevelTransition.loadLevel());
     }
 
     public void quitGame() {

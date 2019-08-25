@@ -24,7 +24,7 @@ public class LevelController : MonoBehaviour
     private int nbCollectedGems = 0;
     private int nbTotalGems;
     private bool timerEndedExecuted = false;
-    private float startLevelTime = 1.5f;
+    private float startLevelTime = 1.1f;
     
     private void Start() {
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
