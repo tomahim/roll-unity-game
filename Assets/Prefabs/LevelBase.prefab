@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2820947970215409389}
+      - m_Target: {fileID: 6595350836365117658}
         m_MethodName: continueGame
         m_Mode: 1
         m_Arguments:
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2820947970215409389}
+      - m_Target: {fileID: 6595350836365117658}
         m_MethodName: retry
         m_Mode: 1
         m_Arguments:
@@ -768,7 +768,7 @@ GameObject:
   - component: {fileID: 8919237960562787359}
   - component: {fileID: 2288623295667615515}
   - component: {fileID: 4758522264559790123}
-  - component: {fileID: 2820947970215409389}
+  - component: {fileID: 6595350836365117658}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -857,7 +857,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &2820947970215409389
+--- !u!114 &6595350836365117658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2820947970215409389}
+      - m_Target: {fileID: 6595350836365117658}
         m_MethodName: quit
         m_Mode: 1
         m_Arguments:
