@@ -52,7 +52,7 @@ public class LevelController : MonoBehaviour
     }
 
     private void Update() {
-        if (LevelTransition.hasGameStarted) {
+        if (LevelTransition.hasGameStarted && !LevelTransition.isPaused) {
             checkTimer();
         }
     }

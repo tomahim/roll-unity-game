@@ -46,6 +46,13 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
+        if (LevelTransition.isPaused) {
+            m_Rigidbody.isKinematic = true;
+            return;
+        } else {
+            m_Rigidbody.isKinematic = false;
+        }
+
         if (LevelTransition.hasGameStarted) {
             float horizontal = Input.GetAxis ("Horizontal");
             float vertical = Input.GetAxis ("Vertical");

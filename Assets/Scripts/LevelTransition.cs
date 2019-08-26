@@ -7,6 +7,7 @@ public static class LevelTransition {
 
     public static int currentLevelNumber = 1;
     public static bool hasGameStarted = false;
+    public static bool isPaused = false;
 
     public static IEnumerator nextLevel() {
         currentLevelNumber += 1;
