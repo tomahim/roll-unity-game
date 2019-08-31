@@ -92,7 +92,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Gem")) {
+        if (other.gameObject.CompareTag("Gem") && !other.gameObject.GetComponent<GemController>().isCounted) {
+            other.gameObject.GetComponent<GemController>().isCounted = true;
             levelController.gemRetrieved();
         }
         if (other.gameObject.CompareTag("Respawn")) {

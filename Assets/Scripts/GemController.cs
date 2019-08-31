@@ -5,9 +5,12 @@ using UnityEngine;
 public class GemController : MonoBehaviour
 {   
     public AudioSource pickupSound;
+    public bool isCatched = false;
+    public bool isCounted = false;
 
      private void OnTriggerEnter(Collider other) {                           
-        if (other.gameObject.CompareTag("Player")) {                        
+        if (other.gameObject.CompareTag("Player") && !isCatched) {
+            isCatched = true;                         
             pickupSound.Play();                                             
             StartCoroutine(makeGemDisappear());                                      
         }                                                                   
