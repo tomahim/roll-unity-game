@@ -42,7 +42,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded() {
         float distanceToTheGround = m_Collider.bounds.extents.y;
-        return Physics.Raycast(transform.position, -Vector3.up, distanceToTheGround + 0.1f);
+        float offset = LevelTransition.isSlopyGround ? 1f : 0.1f;
+        bool raycast = Physics.Raycast(transform.position, -Vector3.up, distanceToTheGround + offset);
+        Debug.Log("distance to ground is " + distanceToTheGround + " " + raycast);
+        return raycast;
     }
 
     private void Update() {

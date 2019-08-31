@@ -41,6 +41,7 @@ public class LevelController : MonoBehaviour
         updateScore();
         displayInstruction(false);
         LevelTransition.currentLevelNumber = getCurrentLevelNumberFromSceneName();
+        setIsSlopyGround();
         timerText.text = "";
         StartCoroutine(displayLevelNumber());
         if (LevelTransition.currentLevelNumber == 1) {
@@ -49,6 +50,11 @@ public class LevelController : MonoBehaviour
         if (LevelTransition.currentLevelNumber == 2) {
             StartCoroutine(showInstruction("Jump with space bar and be carefull not to fall !"));
         }
+    }
+
+    private static void setIsSlopyGround() {
+        Debug.Log("currentLevel" +  LevelTransition.currentLevelNumber);
+        LevelTransition.isSlopyGround = LevelTransition.currentLevelNumber == 5;
     }
 
     private void Update() {
