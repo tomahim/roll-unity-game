@@ -14,7 +14,6 @@ public class GemController : MonoBehaviour
     }                                                                       
                                                                             
     private IEnumerator makeGemDisappear() {
-        Debug.Log("disappear");                                
         ParticleSystem particle = transform.GetComponent<ParticleSystem>(); 
         particle.Play();                                                    
         transform.Find("Cones").gameObject.SetActive(false);                

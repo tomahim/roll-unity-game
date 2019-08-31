@@ -44,7 +44,6 @@ public class PlayerController : MonoBehaviour
         float distanceToTheGround = m_Collider.bounds.extents.y;
         float offset = LevelTransition.isSlopyGround ? 1f : 0.1f;
         bool raycast = Physics.Raycast(transform.position, -Vector3.up, distanceToTheGround + offset);
-        Debug.Log("distance to ground is " + distanceToTheGround + " " + raycast);
         return raycast;
     }
 
@@ -84,7 +83,6 @@ public class PlayerController : MonoBehaviour
                 willExplode = false;
             }
             if (willBounce) {
-                Debug.Log("bounce");
                 isCurrentlyGrounded = false;
                 m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.VelocityChange);
                 // m_Rigidbody.AddForce(Vector3.up * bounceHeight);

@@ -8,7 +8,6 @@ public class MenuController : MonoBehaviour
     public AudioManager audioManager;
 
     private void Start() {
-        audioManager.Play();
         int lastLevelPlayed = PlayerPrefs.GetInt("currentLevelNumber");
         LevelTransition.currentLevelNumber = lastLevelPlayed;
         if(lastLevelPlayed == 1) {

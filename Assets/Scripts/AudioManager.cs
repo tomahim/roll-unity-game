@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AudioManager : MonoBehaviour 
 {
 
     public AudioSource[] ambiantSounds;
     private static AudioManager _instance;
+    
+    private int index = 0;
 
     public static AudioManager instance
     {
@@ -31,6 +34,7 @@ public class AudioManager : MonoBehaviour
             //If I am the first instance, make me the Singleton
             _instance = this;
             DontDestroyOnLoad(this);
+            StartCoroutine(Play());
         }
         else
         {
@@ -41,10 +45,38 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void Play()
+    private static void Randomize(AudioSource[] items)
     {
-        System.Random random = new System.Random();
-        int randomIndex = random.Next(0, ambiantSounds.Length);
-        ambiantSounds[randomIndex].Play();
+        System.Random rand = new System.Random();
+
+        // For each spot in the array, pick
+        // a random item to swap into that spot.
+        for (int i = 0; i < items.Length - 1; i++)
+        {
+            int j = rand.Next(i, items.Length);
+            AudioSource temp = items[i];
+            items[i] = items[j];
+            items[j] = temp;
+        }
+    }
+
+    public IEnumerator Play() {
+        Randomize(ambiantSounds);
+        AudioSource currentAudio = ambiantSounds[index];
+        currentAudio.Play();
+        while(true)
+        {   
+            if(!currentAudio.isPlaying)
+            {   
+                if((index + 1) == ambiantSounds.Length) {
+                    index = 0;   
+                } else {
+                    index++;
+                }
+                currentAudio = ambiantSounds[index];
+                currentAudio.Play();
+            }
+            yield return null;
+        }
     }
 }
