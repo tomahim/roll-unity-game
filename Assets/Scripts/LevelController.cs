@@ -53,7 +53,6 @@ public class LevelController : MonoBehaviour
     }
 
     private static void setIsSlopyGround() {
-        Debug.Log("currentLevel" +  LevelTransition.currentLevelNumber);
         LevelTransition.isSlopyGround = LevelTransition.currentLevelNumber == 5;
     }
 

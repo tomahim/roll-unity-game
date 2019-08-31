@@ -9,6 +9,7 @@ public static class LevelTransition {
     public static bool hasGameStarted = false;
     public static bool gameIsPaused = false;
     public static bool isSlopyGround = false;
+    public static float musicVolume = 1.0f;
 
     public static IEnumerator nextLevel() {
         currentLevelNumber += 1;
@@ -32,6 +33,7 @@ public static class LevelTransition {
     public static void newGame() {
         PlayerPrefs.SetInt("currentLevelNumber", 1);
         currentLevelNumber = 1;
-        SceneManager.LoadScene("LevelTransition");
+        hasGameStarted = false;
+        SceneManager.LoadScene("Level" + currentLevelNumber);
     }
 }
