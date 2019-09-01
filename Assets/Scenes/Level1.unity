@@ -901,17 +901,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1895727984}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1895727984}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1972551332}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -921,6 +911,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1895727984}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1972551332}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -1026,17 +1026,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1229667009}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1229667009}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2092944518}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1046,6 +1036,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1229667009}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2092944518}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -2688,17 +2688,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 800290056}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 800290056}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 613753841}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2708,6 +2698,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 800290056}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 613753841}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -5529,8 +5529,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.85
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5671,17 +5671,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1521500641}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1521500641}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1306028240}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5691,6 +5681,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1521500641}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1306028240}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -5956,17 +5956,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1689683350}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1689683350}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1174486794}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -5976,6 +5966,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1689683350}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1174486794}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -10002,17 +10002,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 280186680}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 280186680}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 2145275127}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10022,6 +10012,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 280186680}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2145275127}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -10549,17 +10549,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1962481670}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1962481670}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1749653705}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10569,6 +10559,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1962481670}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1749653705}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -10674,17 +10674,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1147698412}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1147698412}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1898785884}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10694,6 +10684,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1147698412}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1898785884}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -10805,17 +10805,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1763805218}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1763805218}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1287959288}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10825,6 +10815,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1763805218}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1287959288}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d95835a8d91fd5447b4807b3b797b413, type: 3}
 --- !u!4 &1425705234 stripped
@@ -11896,17 +11896,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 238655397}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 238655397}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 444137926}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11916,6 +11906,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 238655397}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 444137926}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d95835a8d91fd5447b4807b3b797b413, type: 3}
 --- !u!4 &1544972995 stripped
@@ -15673,17 +15673,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 629599299}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 629599299}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 117771069}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15693,6 +15683,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 629599299}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 117771069}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -15905,17 +15905,7 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1036939527}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1036939527}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 1890442983}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -15925,6 +15915,16 @@ PrefabInstance:
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 197836461}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1036939527}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 1890442983}
     - target: {fileID: 477727575398369574, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_SelectedFaces.Array.size
@@ -16376,6 +16376,16 @@ PrefabInstance:
     - target: {fileID: 8855196611643967185, guid: 0d56c963ed618fe469412487033a0921,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8624078852564983805, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603387714940373754, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8467909278866124353, guid: 0d56c963ed618fe469412487033a0921,
