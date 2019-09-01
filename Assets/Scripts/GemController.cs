@@ -20,7 +20,7 @@ public class GemController : MonoBehaviour
         ParticleSystem particle = transform.GetComponent<ParticleSystem>(); 
         particle.Play();                                                    
         transform.Find("Cones").gameObject.SetActive(false);                
-        yield return new WaitForSeconds(0.8f);                                
+        yield return new WaitForSeconds(0.55f);                                
         particle.Stop();                                                    
         Destroy(transform.gameObject);                                      
     }                                                                       
