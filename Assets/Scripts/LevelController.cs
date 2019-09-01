@@ -42,6 +42,7 @@ public class LevelController : MonoBehaviour
         displayInstruction(false);
         LevelTransition.currentLevelNumber = getCurrentLevelNumberFromSceneName();
         setIsSlopyGround();
+        setIsPacmanLevel();
         timerText.text = "";
         StartCoroutine(displayLevelNumber());
         if (LevelTransition.currentLevelNumber == 1) {
@@ -53,7 +54,11 @@ public class LevelController : MonoBehaviour
     }
 
     private static void setIsSlopyGround() {
-        LevelTransition.isSlopyGround = LevelTransition.currentLevelNumber == 5;
+        LevelTransition.isSlopyGround = LevelTransition.currentLevelNumber == 5 || LevelTransition.currentLevelNumber == 15;
+    }
+
+    private static void setIsPacmanLevel() {
+        LevelTransition.isPacmanLevel = LevelTransition.currentLevelNumber == 8;
     }
 
     private void Update() {

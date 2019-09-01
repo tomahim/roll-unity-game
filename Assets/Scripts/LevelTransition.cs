@@ -9,6 +9,7 @@ public static class LevelTransition {
     public static bool hasGameStarted = false;
     public static bool gameIsPaused = false;
     public static bool isSlopyGround = false;
+    public static bool isPacmanLevel = false;
     public static float musicVolume = 1.0f;
 
     public static IEnumerator nextLevel() {

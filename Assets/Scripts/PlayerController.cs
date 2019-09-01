@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                 trail.Clear();
             }
 
-            if (Input.GetKeyDown ("space") && isGrounded()) {
+            if (Input.GetKeyDown ("space") && isGrounded() && !LevelTransition.isPacmanLevel) {
                 isCurrentlyGrounded = false;
                 trail.emitting = true;
                 m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
