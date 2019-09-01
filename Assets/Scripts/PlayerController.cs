@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource explodingSound;
     private AudioSource trampolineBounceSound;
     private AudioSource bounceGroundSound;
+    private TrailRenderer trail; 
 
     private void Start() {
         m_Rigidbody = GetComponent<Rigidbody>();
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         explodingSound = transform.Find("Sounds/ExplodingSound").GetComponent<AudioSource>();
         trampolineBounceSound = transform.Find("Sounds/TrampolineBounceSound").GetComponent<AudioSource>();
         bounceGroundSound = transform.Find("Sounds/BounceGroundSound").GetComponent<AudioSource>();
+        trail = transform.GetComponent<TrailRenderer>();
     }
 
     private bool isGrounded() {
@@ -71,10 +73,13 @@ public class PlayerController : MonoBehaviour
             if (!isCurrentlyGrounded && isGrounded()) {
                 bounceGroundSound.Play();
                 isCurrentlyGrounded = true;
+                trail.emitting = false;
+                trail.Clear();
             }
 
             if (Input.GetKeyDown ("space") && isGrounded()) {
                 isCurrentlyGrounded = false;
+                trail.emitting = true;
                 m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
             }
             

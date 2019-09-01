@@ -1677,26 +1677,26 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1251049052}
-    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 477727574053639970, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 671254698}
-    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2427259876249919922, guid: d95835a8d91fd5447b4807b3b797b413,
         type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 288926099570602136}
+    - target: {fileID: 477727575398369575, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 477727574053639969, guid: d95835a8d91fd5447b4807b3b797b413,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d95835a8d91fd5447b4807b3b797b413, type: 3}
 --- !u!1 &158009908
@@ -14775,6 +14775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBase
       objectReference: {fileID: 0}
+    - target: {fileID: 4537170204170930074, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: enableTimer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8855196611643967185, guid: 0d56c963ed618fe469412487033a0921,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14840,9 +14845,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4537170204170930074, guid: 0d56c963ed618fe469412487033a0921,
+    - target: {fileID: 8467909278866124353, guid: 0d56c963ed618fe469412487033a0921,
         type: 3}
-      propertyPath: enableTimer
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467909278866124353, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993010200685278342, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993010200685278342, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3993010200685278342, guid: 0d56c963ed618fe469412487033a0921,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
