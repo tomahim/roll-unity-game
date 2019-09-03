@@ -54,7 +54,11 @@ public class LevelController : MonoBehaviour
     }
 
     private static void setIsSlopyGround() {
-        LevelTransition.isSlopyGround = LevelTransition.currentLevelNumber == 5 || LevelTransition.currentLevelNumber == 15;
+        LevelTransition.isSlopyGround = (
+            LevelTransition.currentLevelNumber == 5 || 
+            LevelTransition.currentLevelNumber == 12 || 
+            LevelTransition.currentLevelNumber == 18
+        );
     }
 
     private static void setIsPacmanLevel() {
