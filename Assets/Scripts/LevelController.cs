@@ -57,6 +57,7 @@ public class LevelController : MonoBehaviour
         LevelTransition.isSlopyGround = (
             LevelTransition.currentLevelNumber == 5 || 
             LevelTransition.currentLevelNumber == 12 || 
+            LevelTransition.currentLevelNumber == 16 || 
             LevelTransition.currentLevelNumber == 18
         );
     }
