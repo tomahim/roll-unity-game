@@ -51,6 +51,9 @@ public class LevelController : MonoBehaviour
         if (LevelTransition.currentLevelNumber == 2) {
             StartCoroutine(showInstruction("Jump with space bar and be carefull not to fall !"));
         }
+        if (LevelTransition.currentLevelNumber == 21) {
+            StartCoroutine(showInstruction("DANGER ! EARTHQUAKE !"));
+        }
     }
 
     private static void setIsSlopyGround() {
@@ -59,7 +62,8 @@ public class LevelController : MonoBehaviour
             LevelTransition.currentLevelNumber == 12 || 
             LevelTransition.currentLevelNumber == 16 || 
             LevelTransition.currentLevelNumber == 18 || 
-            LevelTransition.currentLevelNumber == 19
+            LevelTransition.currentLevelNumber == 19 || 
+            LevelTransition.currentLevelNumber == 21
         );
     }
 
