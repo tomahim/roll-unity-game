@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minPlayerSpeed = 4.2f;
-    public float maxPlayerSpeed = 7.2f;
+    public float minPlayerSpeed = 3.2f;
+    public float maxPlayerSpeed = 4.2f;
 
-    public float jumpingHeight = 100f;
+    public float jumpingHeight = 60f;
     public LevelController levelController;
 
     Rigidbody m_Rigidbody;
@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     float accelerationStep = 0.005f;
 
     private bool isCurrentlyGrounded = true;
+    private bool isMoving = false;
+    private bool isJumping = false;
 
     private System.Random random;
     private AudioSource fallingSound;
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
             float horizontal = Input.GetAxis ("Horizontal");
             float vertical = Input.GetAxis ("Vertical");
 
-            bool isMoving = horizontal != 0 || vertical != 0;
+            isMoving = horizontal != 0 || vertical != 0;
             if (isMoving) {
                 if (acceleration < minPlayerSpeed) {
                     acceleration = minPlayerSpeed;
@@ -68,31 +70,43 @@ public class PlayerController : MonoBehaviour
 
             m_Movement.Set(horizontal, 0, vertical);
             m_Movement.Normalize();
-            m_Rigidbody.AddForce(m_Movement * acceleration);
+
+            if (Input.GetKeyDown ("space") && isGrounded() && !LevelTransition.isPacmanLevel) {
+                isJumping = true;
+            }
             
+
             if (!isCurrentlyGrounded && isGrounded()) {
-                bounceGroundSound.Play();
                 isCurrentlyGrounded = true;
                 trail.emitting = false;
                 trail.Clear();
-            }
-
-            if (Input.GetKeyDown ("space") && isGrounded() && !LevelTransition.isPacmanLevel) {
-                isCurrentlyGrounded = false;
-                trail.emitting = true;
-                m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
             }
             
             if (willExplode) {
                 m_Rigidbody.AddForce (random.Next(6), 15f, random.Next(6), ForceMode.Impulse);
                 willExplode = false;
             }
-            if (willBounce) {
-                isCurrentlyGrounded = false;
-                m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.VelocityChange);
-                // m_Rigidbody.AddForce(Vector3.up * bounceHeight);
-                willBounce = false;
-            }
+        }
+    }
+
+    private void FixedUpdate() {
+        if (isMoving) {
+            m_Rigidbody.AddForce(m_Movement * acceleration);
+        }
+
+        if (isJumping) {
+            bounceGroundSound.Play();
+            isCurrentlyGrounded = false;
+            trail.emitting = true;
+            m_Rigidbody.AddForce(Vector3.up * jumpingHeight);
+            isJumping = false;
+        }
+
+        if (willBounce) {
+            isCurrentlyGrounded = false;
+            m_Rigidbody.AddForce (0, bounceHeight, 0, ForceMode.VelocityChange);
+            // m_Rigidbody.AddForce(Vector3.up * bounceHeight);
+            willBounce = false;
         }
     }
 

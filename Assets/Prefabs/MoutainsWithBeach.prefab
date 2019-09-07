@@ -93,7 +93,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751057546672
 Transform:
@@ -1598,7 +1598,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751171479456
 Transform:
@@ -1629,7 +1629,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751236262653
 Transform:
@@ -1660,7 +1660,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751284327544
 Transform:
@@ -1695,7 +1695,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751602592692
 Transform:
@@ -2484,7 +2484,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751673930319
 Transform:
@@ -2519,7 +2519,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751773089087
 Transform:
@@ -4028,7 +4028,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751777043962
 Transform:
@@ -5534,7 +5534,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751820621903
 Transform:
@@ -5565,7 +5565,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751935436135
 Transform:
@@ -5596,7 +5596,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229751950416333
 Transform:
@@ -5630,7 +5630,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229752011151697
 Transform:
@@ -5669,7 +5669,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229752397805114
 Transform:
@@ -5701,7 +5701,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229752412748014
 Transform:
@@ -5820,7 +5820,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229752533414593
 Transform:
@@ -5852,7 +5852,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229752601174232
 Transform:
@@ -6043,7 +6043,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4044229753042620771
 Transform:
@@ -6893,6 +6893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6967,6 +6972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
@@ -7043,6 +7053,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7117,6 +7132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
@@ -7193,6 +7213,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7267,6 +7292,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
@@ -7343,6 +7373,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptimizedTree
       objectReference: {fileID: 0}
+    - target: {fileID: 4221502737162947405, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2394931764102734124, guid: 5b90b7402617c7b4fbc0ed2d75490e3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7417,6 +7452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: OptimizedTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474997989713924948, guid: 20ba2706dac7b3c469aad1b70112bc87,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2716560531538786613, guid: 20ba2706dac7b3c469aad1b70112bc87,
         type: 3}
