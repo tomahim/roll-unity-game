@@ -12,4 +12,10 @@ public class MuteGameAudio : MonoBehaviour
     {
         mixer.SetFloat("Music", Mathf.Log10(0.0001f) * 20);
     }
+
+    private void Update() {
+        if (Input.GetKey ("escape")) {
+            LevelTransition.goBackMenu();
+        }
+    }
 }

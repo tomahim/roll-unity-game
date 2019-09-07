@@ -44,4 +44,8 @@ public static class LevelTransition {
         hasGameStarted = false;
         SceneManager.LoadScene("Level" + currentLevelNumber);
     }
+
+    public static void goBackMenu() {
+        SceneManager.LoadScene("Menu");
+    }
 }
