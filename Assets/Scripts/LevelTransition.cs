@@ -19,6 +19,13 @@ public static class LevelTransition {
         hasGameStarted = false;
         SceneManager.LoadScene("Level" + currentLevelNumber);
     }
+
+    public static IEnumerator credits() {
+        PlayerPrefs.SetInt("currentLevelNumber", 22);
+        yield return new WaitForSeconds(2.5f);
+        hasGameStarted = false;
+        SceneManager.LoadScene("Credits");
+    }
     
     public static IEnumerator loadLevel(float waitingTime = 2.5f) {
         yield return new WaitForSeconds(waitingTime);

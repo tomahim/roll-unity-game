@@ -25,6 +25,7 @@ public class LevelController : MonoBehaviour
     private int nbTotalGems;
     private bool timerEndedExecuted = false;
     private float startLevelTime = 1.1f;
+    public int lastLevel = 22;
     
     private void Start() {
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
@@ -87,8 +88,12 @@ public class LevelController : MonoBehaviour
 
     private void levelCompleted() {
         levelCompleteSound.Play();
-        StartCoroutine(displayLevelComplete());
-        StartCoroutine(LevelTransition.nextLevel()); 
+        if (LevelTransition.currentLevelNumber == lastLevel) {
+            StartCoroutine(displayLevelComplete());
+            StartCoroutine(LevelTransition.credits()); 
+        } else {
+            StartCoroutine(LevelTransition.nextLevel()); 
+        }
     }
 
     private int getCurrentLevelNumberFromSceneName() {
