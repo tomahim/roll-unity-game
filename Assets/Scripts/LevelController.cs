@@ -69,7 +69,10 @@ public class LevelController : MonoBehaviour
     }
 
     private static void setIsPacmanLevel() {
-        LevelTransition.isPacmanLevel = LevelTransition.currentLevelNumber == 8;
+        LevelTransition.isPacmanLevel = (
+            LevelTransition.currentLevelNumber == 8 || 
+            LevelTransition.currentLevelNumber == 17
+        );
     }
 
     private void Update() {
@@ -88,8 +91,8 @@ public class LevelController : MonoBehaviour
 
     private void levelCompleted() {
         levelCompleteSound.Play();
+        StartCoroutine(displayLevelComplete());
         if (LevelTransition.currentLevelNumber == lastLevel) {
-            StartCoroutine(displayLevelComplete());
             StartCoroutine(LevelTransition.credits()); 
         } else {
             StartCoroutine(LevelTransition.nextLevel()); 
