@@ -29,9 +29,9 @@ public class LevelController : MonoBehaviour
     public int lastLevel = 22;
     
     private void Start() {
-        Debug.Log(getUserResolutionWidth() < 2000);
-        Screen.fullScreen = getUserResolutionWidth() < 2000;
-        Screen.SetResolution(1900, 1200, getUserResolutionWidth() < 2000);
+        int userResolutionWidth = getUserResolutionWidth();
+        Screen.fullScreen = userResolutionWidth < 2000;
+        Screen.SetResolution(1900, 1200, userResolutionWidth < 2000);
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
         imageInstruction = transform.Find("GameCanvas/InstructionBox").GetComponent<Image>();
         textInstruction = transform.Find("GameCanvas/InstructionBox/InstructionsText").GetComponent<Text>();

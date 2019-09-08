@@ -33,6 +33,14 @@ public static class LevelTransition {
         SceneManager.LoadScene("Level" + currentLevelNumber);
     }
     
+    public static IEnumerator loadLevelNumber(string levelNumber, float waitingTime = 2.5f) {
+        Debug.Log("loadLevelNumber" + levelNumber);
+        PlayerPrefs.SetInt("currentLevelNumber", System.Int32.Parse(levelNumber));
+        yield return new WaitForSeconds(waitingTime);
+        hasGameStarted = false;
+        SceneManager.LoadScene("Level" + levelNumber);
+    }
+    
     public static IEnumerator loadLevelWithTransition() {
         yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene("LevelTransition");
