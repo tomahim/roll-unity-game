@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System;
+using System.Text.RegularExpressions;
 
 public class LevelController : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class LevelController : MonoBehaviour
     public int lastLevel = 22;
     
     private void Start() {
+        Debug.Log(getUserResolutionWidth() < 2000);
+        Screen.fullScreen = getUserResolutionWidth() < 2000;
+        Screen.SetResolution(1900, 1200, getUserResolutionWidth() < 2000);
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
         imageInstruction = transform.Find("GameCanvas/InstructionBox").GetComponent<Image>();
         textInstruction = transform.Find("GameCanvas/InstructionBox/InstructionsText").GetComponent<Text>();
@@ -55,6 +59,16 @@ public class LevelController : MonoBehaviour
         if (LevelTransition.currentLevelNumber == 21) {
             StartCoroutine(showInstruction("DANGER ! EARTHQUAKE !"));
         }
+    }
+
+    private int getUserResolutionWidth() {
+        int x = 0;
+        string width = Regex.Split(Screen.currentResolution.ToString(), " x ")[0];
+        if (Int32.TryParse(width, out x))
+        {
+            return x;
+        }
+        return 9999;
     }
 
     private static void setIsSlopyGround() {
