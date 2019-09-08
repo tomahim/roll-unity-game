@@ -11,6 +11,7 @@ public static class LevelTransition {
     public static bool isSlopyGround = false;
     public static bool isPacmanLevel = false;
     public static float musicVolume = 1.0f;
+    public static string resolutionMode = "2";
 
     public static IEnumerator nextLevel() {
         currentLevelNumber += 1;

@@ -8,6 +8,9 @@ public class MenuBoxController : MonoBehaviour
 {   
     public GameObject cheatChodeField;
     public Text levelCheatNumber;
+    
+    public GameObject resolutionField;
+    public Text resolutionText;
 
     private string[] cheatCode;
     private int indexCheatCode;
@@ -22,6 +25,7 @@ public class MenuBoxController : MonoBehaviour
         cheatCode = new string[] { "l", "e", "v", "e", "l" };
         indexCheatCode = 0;    
         cheatChodeField.SetActive(false);
+        resolutionField.SetActive(false);
     }
 
     void Update()
@@ -51,11 +55,15 @@ public class MenuBoxController : MonoBehaviour
                         StartCoroutine(LevelTransition.loadLevelNumber(levelCheatNumber.text));
                     }
                 }
+                if (resolutionText.text != "" && Input.GetKeyDown ("e")) {
+                    PlayerPrefs.SetString("ResolutionModeCheatcode", resolutionText.text);
+                }
             }
             
             if (cheatCodeActivated) {
                 // Cheat code successfully inputted!
                 cheatChodeField.SetActive(true);
+                resolutionField.SetActive(true);
             }
         }
     }

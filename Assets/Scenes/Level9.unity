@@ -7835,10 +7835,11 @@ AudioSource:
   m_GameObject: {fileID: 709932468}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 78f420678957f3249a4c98cfe845ff5e,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 530d05c1be67f124ca97ac3c29029aa7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.51
+  m_Volume: 0.589
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -18995,6 +18996,15 @@ PrefabInstance:
       propertyPath: levelController
       value: 
       objectReference: {fileID: 1408452935}
+    - target: {fileID: 24957978, guid: 7683fb123119c1041946c50c5c9b2198, type: 3}
+      propertyPath: m_Volume
+      value: 0.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 6649775995590904897, guid: 7683fb123119c1041946c50c5c9b2198,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.575
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7683fb123119c1041946c50c5c9b2198, type: 3}
 --- !u!1001 &477727575617533881

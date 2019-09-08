@@ -29,10 +29,16 @@ public class LevelController : MonoBehaviour
     public int lastLevel = 22;
     
     private void Start() {
-        int userResolutionWidth = getUserResolutionWidth();
-        bool isFullScreen = userResolutionWidth < 2000;
-        Screen.fullScreen = isFullScreen;
-        Screen.SetResolution(1900, 1200, userResolutionWidth < 2000);
+        
+        LevelTransition.resolutionMode = PlayerPrefs.GetString("ResolutionModeCheatcode");
+        if (LevelTransition.resolutionMode == "1") {
+            int userResolutionWidth = getUserResolutionWidth();
+            bool isFullScreen = userResolutionWidth < 2000;
+            Screen.fullScreen = isFullScreen;
+            Screen.SetResolution(1900, 1200, isFullScreen);
+        } else if(LevelTransition.resolutionMode == "2") {
+            Screen.SetResolution (Screen.currentResolution.width, Screen.currentResolution.height, true);
+        }
 
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
         imageInstruction = transform.Find("GameCanvas/InstructionBox").GetComponent<Image>();

@@ -9,14 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: ad11495dfe161b14eb42bd9c484840a0
   - enabled: 0
-    path: Assets/Scenes/LevelTransition.unity
-    guid: 7c2f1061707ae934aa14252742e840e1
+    path: Assets/Scenes/Level0.unity
+    guid: 32c39707b9cf4e244803cb86ae2c0b07
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 4d139b0eb2682bf4595a44e8bd411e42
+  - enabled: 0
+    path: Assets/Scenes/Level1__old.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Level2.unity
     guid: bb58f590566ee7145b505fb565fbbefa
+  - enabled: 0
+    path: Assets/Scenes/Level2__old.unity
+    guid: bd2631a5505f0974285b19d3635489fd
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: bdb00486d7a00d84cbb6ba085c0ef6c0
@@ -81,9 +87,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: 28e33e0da138e19488374e5b8cde2f30
   - enabled: 0
-    path: Assets/Scenes/Level1__old.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/LevelTransition.unity
+    guid: 7c2f1061707ae934aa14252742e840e1
   - enabled: 0
-    path: Assets/Scenes/Level2__old.unity
-    guid: bd2631a5505f0974285b19d3635489fd
+    path: Assets/Scenes/LogoDeco.unity
+    guid: bf390766ad77fda48a33909324a09c8c
   m_configObjects: {}
