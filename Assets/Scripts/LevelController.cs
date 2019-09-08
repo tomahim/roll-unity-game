@@ -30,8 +30,10 @@ public class LevelController : MonoBehaviour
     
     private void Start() {
         int userResolutionWidth = getUserResolutionWidth();
-        Screen.fullScreen = userResolutionWidth < 2000;
+        bool isFullScreen = userResolutionWidth < 2000;
+        Screen.fullScreen = isFullScreen;
         Screen.SetResolution(1900, 1200, userResolutionWidth < 2000);
+
         scoreText = GameObject.Find("GameCanvas/ScoreText").GetComponent<Text>();
         imageInstruction = transform.Find("GameCanvas/InstructionBox").GetComponent<Image>();
         textInstruction = transform.Find("GameCanvas/InstructionBox/InstructionsText").GetComponent<Text>();
@@ -73,6 +75,7 @@ public class LevelController : MonoBehaviour
 
     private static void setIsSlopyGround() {
         LevelTransition.isSlopyGround = (
+            LevelTransition.currentLevelNumber == 4 || 
             LevelTransition.currentLevelNumber == 5 || 
             LevelTransition.currentLevelNumber == 12 || 
             LevelTransition.currentLevelNumber == 16 || 

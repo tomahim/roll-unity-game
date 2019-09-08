@@ -34,7 +34,6 @@ public static class LevelTransition {
     }
     
     public static IEnumerator loadLevelNumber(string levelNumber, float waitingTime = 2.5f) {
-        Debug.Log("loadLevelNumber" + levelNumber);
         PlayerPrefs.SetInt("currentLevelNumber", System.Int32.Parse(levelNumber));
         yield return new WaitForSeconds(waitingTime);
         hasGameStarted = false;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float minPlayerSpeed = 3.2f;
-    public float maxPlayerSpeed = 4.2f;
+    public float minPlayerSpeed = 5.2f;
+    public float maxPlayerSpeed = 8.2f;
 
     public float jumpingHeight = 60f;
     public LevelController levelController;
